@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Care.UI", "Care.UI\Care.UI.csproj", "{0C77C3F6-850A-4CBB-8017-6D05C5341CA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Care.API", "Care.API\Care.API.csproj", "{CE9EB834-90B9-48C6-8345-4411B6700967}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Care.Data", "Care.Data\Care.Data.csproj", "{165845EB-EBC0-4693-905E-DA556ABE33C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C77C3F6-850A-4CBB-8017-6D05C5341CA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C77C3F6-850A-4CBB-8017-6D05C5341CA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C77C3F6-850A-4CBB-8017-6D05C5341CA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C77C3F6-850A-4CBB-8017-6D05C5341CA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE9EB834-90B9-48C6-8345-4411B6700967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE9EB834-90B9-48C6-8345-4411B6700967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE9EB834-90B9-48C6-8345-4411B6700967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE9EB834-90B9-48C6-8345-4411B6700967}.Release|Any CPU.Build.0 = Release|Any CPU
+		{165845EB-EBC0-4693-905E-DA556ABE33C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{165845EB-EBC0-4693-905E-DA556ABE33C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{165845EB-EBC0-4693-905E-DA556ABE33C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{165845EB-EBC0-4693-905E-DA556ABE33C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F780F18C-652C-4567-81F1-E5A691B92E8D}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://artabr.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Care.UI\\Care.UI.csproj
+		SccProjectName1 = Care.UI
+		SccLocalPath1 = Care.UI
+		SccProjectUniqueName2 = Care.API\\Care.API.csproj
+		SccProjectName2 = Care.API
+		SccLocalPath2 = Care.API
+		SccProjectUniqueName3 = Care.Data\\Care.Data.csproj
+		SccProjectName3 = Care.Data
+		SccLocalPath3 = Care.Data
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,196 @@
+﻿<Window x:Class="Care.UI.CareGiverProfile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Care.UI"
+        mc:Ignorable="d"
+        Title="CareGiverProfile"  MinHeight="500" MinWidth="700"  Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" Width="1164.716" Height="688">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="165*"/>
+            <ColumnDefinition Width ="766*"/>
+            <ColumnDefinition Width="226*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Image HorizontalAlignment="Center" Height="100" VerticalAlignment="Top" Margin="10" Width="100" Name="userImageCircle" OpacityMask="Gray" Source="Img/default-user-image.png" >
+                    <Image.Clip>
+                        <EllipseGeometry Center="50,50" RadiusX="45" RadiusY="45"/>
+                    </Image.Clip>
+                </Image>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Expander Name="userName" Header="User Name" Margin="10">
+                    <StackPanel>
+                        <Button Content="Log out" Width="50" BorderThickness="0" Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}"/>
+                    </StackPanel>
+                </Expander>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="1" >
+            <TabControl x:Name="TabControl" HorizontalAlignment="Left"  Margin="10,10,0,0" VerticalAlignment="Top" MinHeight="400" MinWidth="750" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Height="528" >
+
+                <TabItem Header="Personal Info"  >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="3*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Column="1">
+                                <Image HorizontalAlignment="Center" Height="229" VerticalAlignment="Center" Width="224" Name="UserImage" OpacityMask="Gray" Source="Img/default-user-image.png"/>
+                            </Grid>
+                            <Grid Column="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*" />
+                                    <ColumnDefinition Width="5*" />
+                                    <ColumnDefinition Width="1*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*"  />
+                                    <RowDefinition Height="1*" />
+                                    <RowDefinition Height="1*" />
+                                    <RowDefinition Height="1*" />
+                                </Grid.RowDefinitions>
+                                <Grid Row="0">
+                                    <TextBlock Grid.Column="0" Text="First Name:" FontSize="20" TextAlignment="Center" Margin="5,10,5,10" Foreground="#FF586177" FontFamily="Segoe Print"></TextBlock>
+                                </Grid>
+                                <Grid Row="1">
+                                    <TextBlock Grid.Column="0" Text="Last Name:" FontSize="20" TextAlignment="Center" Margin="5,10,5,10" Foreground="#FF586177" FontFamily="Segoe Print"></TextBlock>
+                                </Grid>
+                                <Grid Row="2">
+                                    <TextBlock Grid.Column="0" Text="Age:" FontSize="20" TextAlignment="Center" Margin="5,10,5,10" Foreground="#FF586177" FontFamily="Segoe Print"></TextBlock>
+                                </Grid>
+                                <Grid Row="3">
+                                    <TextBlock Grid.Column="0" Text="E-Mail:" FontSize="20" TextAlignment="Center" Margin="5,10,5,10" Foreground="#FF586177" FontFamily="Segoe Print"></TextBlock>
+                                </Grid>
+                                <Button Grid.Row="0" Grid.Column="2" FontSize="15" Height="34" Width="35" Foreground="Red" FontFamily="Tahoma" Click="btnChangePersonalInfo_Click" VerticalAlignment="Center" Margin="13,20,8,21" >
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="Img/edit.png"/>
+                                    </Button.Background>
+                                </Button>
+                            </Grid>
+                            <Grid Column="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="2*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*"  />
+                                    <RowDefinition Height="1*" />
+                                    <RowDefinition Height="1*" />
+                                    <RowDefinition Height="1*" />
+                                </Grid.RowDefinitions>
+                                <Grid Row="0">
+                                    <TextBlock Grid.Column="0"  FontSize="20" TextAlignment="Center" Margin="5,10,5,10" Foreground="#FF586177" FontFamily="Segoe Print"></TextBlock>
+                                </Grid>
+                                <Grid Row="1">
+                                    <TextBlock Grid.Column="0"  FontSize="20" TextAlignment="Center" Margin="5,10,5,10" Foreground="#FF586177" FontFamily="Segoe Print"></TextBlock>
+                                </Grid>
+                                <Grid Row="2">
+                                    <TextBlock Grid.Column="0"  FontSize="20" TextAlignment="Center" Margin="5,10,5,0" Foreground="#FF586177" FontFamily="Segoe Print"></TextBlock>
+                                </Grid>
+                                <Grid Row="3">
+                                    <TextBlock Grid.Column="0"  FontSize="20" TextAlignment="Center" Margin="5,10,5,10" Foreground="#FF586177" FontFamily="Segoe Print"></TextBlock>
+                                </Grid>
+
+                                <TextBlock Grid.Row="0" Grid.Column="1" Height="30" Name="FName" FontSize="15" Margin="15,10,41,17" Text="{Binding Path = Name, UpdateSourceTrigger=PropertyChanged}"/>
+                                <TextBlock Grid.Row="1" Grid.Column="1" Height="30" Width="300" Name="LastName" Text="{Binding Path = LastName, UpdateSourceTrigger=PropertyChanged}" FontSize="15"/>
+                                <TextBlock Grid.Row="2" Grid.Column="1" Height="30" Width="300" Name="Age" FontSize="15" Text="{Binding Path = Age, UpdateSourceTrigger=PropertyChanged}"/>
+                                <TextBlock Grid.Row="3" Grid.Column="1" Height="30" Width="300" Name="Email" FontSize="15" Text="{Binding Path = Email, UpdateSourceTrigger=PropertyChanged}"/>
+                            </Grid>
+                        </Grid>
+                        <Grid Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="10*"/>
+                                    <RowDefinition Height="11*"/>
+                                </Grid.RowDefinitions>
+                                <Button Grid.Row="0"   Content="Add Photo" FontSize="15" Height="20" Width="200" Background="#FF5D6679" Foreground="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" FontFamily="Snap ITC" Click="btnAddPhoto_Click" />
+                                <TextBlock Grid.Row="1" Text="Rating" FontSize="15" TextAlignment="Center"  Foreground="#FF586177" FontFamily="Segoe Print" ></TextBlock>
+                                <!-- Rating -->
+                            </Grid>
+                            <Grid Column="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="448*"/>
+                                    <ColumnDefinition Width="59*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*"  />
+                                    <RowDefinition Height="2*" />
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Row="0" Grid.Column="0" Text="Address, City, Country" FontSize="15" Margin="20,0,0,36"  Foreground="#FF586177" FontFamily="Segoe Print" Grid.RowSpan="2"></TextBlock>
+                                <Button Grid.Row="0" Grid.Column="1"  Content="+" FontSize="15" Height="40" Width="30" Background="#FF5D6679" Foreground="Wheat" FontFamily="Tahoma" Click="btnChangeACC_Click" VerticalAlignment="Center" />
+                                <TextBlock Grid.Row="1" Grid.Column="0"  Height="30" Name="AddressCityCountry" FontSize="15" Margin="10,6" Grid.ColumnSpan="2"/>
+                            </Grid>
+                        </Grid>
+                        <Grid Row="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="37*"/>
+                                <RowDefinition Height="63*"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="5*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" FontSize="20" TextAlignment="left" Foreground="#FF586177" FontFamily="Segoe Print" Margin="10,0,0,0" Text="About Me" />
+                                <Button Grid.Column="1" FontSize="5" Height="35" Width="35" FontFamily="Tahoma" Click="btnAnoutMe_Click" VerticalAlignment="Center" >
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="Img/edit.png"/>
+                                    </Button.Background>
+                                </Button>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <TextBlock Name="AboutMeBox" FontSize="15" Text="{Binding Path = AboutMe, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Find Work">
+
+                </TabItem>
+                <TabItem Header="My Jobs">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"  />
+                            <RowDefinition Height="4*" />
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0" >
+                            <TextBlock  Text="Jobs" FontSize="30" TextAlignment="Center" Foreground="#FF586177" FontFamily="Segoe Print" />
+                        </Grid>
+                        <Grid Grid.Row="1">
+                            <FlowDocumentReader x:Name="JobsBox" Background="Wheat" FontSize="15" Margin="10,10,20,10">
+                                <FlowDocument  Background="AliceBlue">
+                                    <List x:Name="jobList"/>
+                                </FlowDocument>
+                            </FlowDocumentReader>
+                        </Grid>
+
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </Grid>
+</Window>

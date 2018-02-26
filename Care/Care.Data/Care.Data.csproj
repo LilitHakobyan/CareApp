@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{165845EB-EBC0-4693-905E-DA556ABE33C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Care.Data</RootNamespace>
+    <AssemblyName>Care.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseRepository.cs" />
+    <Compile Include="CareDbContext.cs" />
+    <Compile Include="DataViewModels\CareType.cs" />
+    <Compile Include="DataViewModels\Contract.cs" />
+    <Compile Include="DataViewModels\Feedback.cs" />
+    <Compile Include="DataViewModels\Job.cs" />
+    <Compile Include="DataViewModels\RoleType.cs" />
+    <Compile Include="DataViewModels\UserInfo.cs" />
+    <Compile Include="Enums\CareTypesEnum.cs" />
+    <Compile Include="Migrations\201801261219285_initial.cs" />
+    <Compile Include="Migrations\201801261219285_initial.Designer.cs">
+      <DependentUpon>201801261219285_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801262228090_TrickingWithConfigs.cs" />
+    <Compile Include="Migrations\201801262228090_TrickingWithConfigs.Designer.cs">
+      <DependentUpon>201801262228090_TrickingWithConfigs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801270858573_AddedRolesTable.cs" />
+    <Compile Include="Migrations\201801270858573_AddedRolesTable.Designer.cs">
+      <DependentUpon>201801270858573_AddedRolesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801291133165_DatabaseDesigned.cs" />
+    <Compile Include="Migrations\201801291133165_DatabaseDesigned.Designer.cs">
+      <DependentUpon>201801291133165_DatabaseDesigned.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801291443138_UserInfoAdded.cs" />
+    <Compile Include="Migrations\201801291443138_UserInfoAdded.Designer.cs">
+      <DependentUpon>201801291443138_UserInfoAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801291713106_UserInfoVersion1.cs" />
+    <Compile Include="Migrations\201801291713106_UserInfoVersion1.Designer.cs">
+      <DependentUpon>201801291713106_UserInfoVersion1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801292001001_DBFinal.cs" />
+    <Compile Include="Migrations\201801292001001_DBFinal.Designer.cs">
+      <DependentUpon>201801292001001_DBFinal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801300922228_ProposalsAdded.cs" />
+    <Compile Include="Migrations\201801300922228_ProposalsAdded.Designer.cs">
+      <DependentUpon>201801300922228_ProposalsAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802012323477_EnumType.cs" />
+    <Compile Include="Migrations\201802012323477_EnumType.Designer.cs">
+      <DependentUpon>201802012323477_EnumType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802020815273_Feb02Migration.cs" />
+    <Compile Include="Migrations\201802020815273_Feb02Migration.Designer.cs">
+      <DependentUpon>201802020815273_Feb02Migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802021846475_NullableDateTime.cs" />
+    <Compile Include="Migrations\201802021846475_NullableDateTime.Designer.cs">
+      <DependentUpon>201802021846475_NullableDateTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802021853200_Null2DateTime.cs" />
+    <Compile Include="Migrations\201802021853200_Null2DateTime.Designer.cs">
+      <DependentUpon>201802021853200_Null2DateTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802021914247_HosoCEOBugFix.cs" />
+    <Compile Include="Migrations\201802021914247_HosoCEOBugFix.Designer.cs">
+      <DependentUpon>201802021914247_HosoCEOBugFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802021949265_Davadit.cs" />
+    <Compile Include="Migrations\201802021949265_Davadit.Designer.cs">
+      <DependentUpon>201802021949265_Davadit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802022030086_JobHasFeedbacks.cs" />
+    <Compile Include="Migrations\201802022030086_JobHasFeedbacks.Designer.cs">
+      <DependentUpon>201802022030086_JobHasFeedbacks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\EntityBase.cs" />
+    <Compile Include="Enums\RoleTypesEnum.cs" />
+    <Compile Include="DataViewModels\Role.cs" />
+    <Compile Include="DataViewModels\UserRelated\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DataViewModels\Proposal.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201801261219285_initial.resx">
+      <DependentUpon>201801261219285_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801262228090_TrickingWithConfigs.resx">
+      <DependentUpon>201801262228090_TrickingWithConfigs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801270858573_AddedRolesTable.resx">
+      <DependentUpon>201801270858573_AddedRolesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801291133165_DatabaseDesigned.resx">
+      <DependentUpon>201801291133165_DatabaseDesigned.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801291443138_UserInfoAdded.resx">
+      <DependentUpon>201801291443138_UserInfoAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801291713106_UserInfoVersion1.resx">
+      <DependentUpon>201801291713106_UserInfoVersion1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801292001001_DBFinal.resx">
+      <DependentUpon>201801292001001_DBFinal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801300922228_ProposalsAdded.resx">
+      <DependentUpon>201801300922228_ProposalsAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802012323477_EnumType.resx">
+      <DependentUpon>201802012323477_EnumType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802020815273_Feb02Migration.resx">
+      <DependentUpon>201802020815273_Feb02Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802021846475_NullableDateTime.resx">
+      <DependentUpon>201802021846475_NullableDateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802021853200_Null2DateTime.resx">
+      <DependentUpon>201802021853200_Null2DateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802021914247_HosoCEOBugFix.resx">
+      <DependentUpon>201802021914247_HosoCEOBugFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802021949265_Davadit.resx">
+      <DependentUpon>201802021949265_Davadit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802022030086_JobHasFeedbacks.resx">
+      <DependentUpon>201802022030086_JobHasFeedbacks.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

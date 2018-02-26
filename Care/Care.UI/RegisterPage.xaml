@@ -1,0 +1,78 @@
+﻿<Window x:Class="Care.UI.RegisterPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Care.UI"
+        mc:Ignorable="d"
+        Title="Register" Height="600" Width="700" ResizeMode="CanMinimize" Background="LightBlue">
+    <Grid>        
+        <Grid x:Name="grdSelectRoleType" Visibility="Visible">            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"  />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" TextAlignment="Center" Margin="196,10,129,27" Height="53" FontSize="36" Text="Choose an option" Foreground="#FF586177" FontFamily="Showcard Gothic"/>
+            <Grid Grid.Row="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="I need a caregiver" Height="50" Width="300" Margin="20,33,26,96" TextAlignment="Center" FontFamily="Showcard Gothic" Foreground="#FF586177" FontSize="26"/>
+                <Button Grid.Column="0" Height="50" Width="300" Margin="20,99,26,30" Content="Find Care" FontSize="26" Background="#FF586177" FontFamily="Showcard Gothic" Foreground="#FFF0F0F0" Name ="btnCare" Click="btnRoleType_Click"></Button>
+                <TextBlock Grid.Column="1" Text="I want a care job" Height="50" Width="300" Margin="20,33,26,96" TextAlignment="Center" FontFamily="Showcard Gothic" Foreground="#FF586177" FontSize="26"></TextBlock>
+                <Button Grid.Column="1" Height="50" Width="300" Margin="20,99,26,30" Content="Find Job" FontSize="26" Background="#FF586177" FontFamily="Showcard Gothic" Foreground="#FFF0F0F0"  Name ="btnJob" Click="btnRoleType_Click"/>
+            </Grid>
+        </Grid>
+        <Grid x:Name="grdRegistration" Visibility="Visible">
+            <Grid.Background>AliceBlue</Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"  />
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" FontSize="100" TextAlignment="Center" FontFamily="Snap ITC" Text="Join us" Foreground="#FF586177" />
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"  />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*"  />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Text="First Name" FontSize="20" TextAlignment="Center" Margin="5,10,5,10" Foreground="#FF586177" FontFamily="Segoe Print"></TextBlock>
+                    <TextBlock Grid.Row="1" Text="Last Name"  FontSize="20" TextAlignment="Center" Margin="5,10,5,10" Foreground="#FF586177" FontFamily="Segoe Print" ></TextBlock>
+
+                    <TextBlock Grid.Row="2" Text="Email"  FontSize="20" TextAlignment="Center" Margin="5,10,5,10" Foreground="#FF586177" FontFamily="Segoe Print" ></TextBlock>
+
+
+                    <TextBlock Grid.Row="3" Text="Password"  FontSize="20" TextAlignment="Center" Margin="5,10,5,10" Foreground="#FF586177" FontFamily="Segoe Print" ></TextBlock>
+                    <TextBlock Grid.Row="4"  FontSize="20" TextAlignment="Center" Margin="5 1 5 20" Foreground="#FF586177" FontFamily="Segoe Print" ><Run Text="Confirm "/><LineBreak/><Run/><LineBreak/><Run Text="Password"/></TextBlock>
+                    <TextBlock Grid.Row="4"  FontSize="20" TextAlignment="Center" Margin="5,20,5,10" Foreground="#FF586177" FontFamily="Segoe Print" ><Run Text="Password "/><LineBreak/><Run/><LineBreak/><Run Text="Password"/></TextBlock>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"  />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*"  />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <TextBox Grid.Row="0" Height="30" Width="350" Name="FNameText" FontSize="15"></TextBox>
+                    <TextBox Grid.Row="1" Height="30" Width="350" Name="LNameText" FontSize="15"></TextBox>
+                    
+                    <TextBox Grid.Row="2" Height="30" Width="350" Name="EmailText" FontSize="15"></TextBox>
+                   
+                    <PasswordBox Grid.Row="3" Height="30" Width="350" Name="PasswordBox" FontSize="15"></PasswordBox>
+                    <PasswordBox Grid.Row="4" Height="30" Width="350" Name="PasswordBoxConfirm" FontSize="15"></PasswordBox>
+                </Grid>
+            </Grid>
+            <Button Grid.Row="2" Margin="50 20 50 20" Content="Join Now" FontSize="30" Height="40" Width="250" Background="#FF5D6679" Foreground="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" FontFamily="Snap ITC" Click="btnRegister_Click" />
+        </Grid>
+    </Grid>
+</Window>

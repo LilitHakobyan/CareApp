@@ -1,0 +1,73 @@
+﻿<Window x:Class="Care.UI.PersonalInfoEditWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Care.UI"
+        mc:Ignorable="d"
+        Title="PersonalInfoEditWin" Height="400" Width="500" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.Background>LightGray</Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="74*"  />
+            <RowDefinition Height="60*" />
+            <RowDefinition Height="60*"  />
+            <RowDefinition Height="60*"  />
+            <RowDefinition Height="60*" />
+            <RowDefinition Height="80*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBlock  Text="Personal Info Edit" Height="40" TextAlignment="Center" FontFamily="Showcard Gothic" Foreground="#FF586177" FontSize="20" Margin="100,15,115,15" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="-0.302"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="-0.559"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+        </Grid>
+        <Grid Grid.Row="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="First Name:" Height="40" Width="130" TextAlignment="Center" FontFamily="Showcard Gothic" Foreground="#FF586177" FontSize="20"/>
+            <TextBox Grid.Column="1" Height="30" Width="300" Name="FName" FontSize="15"   Text="{Binding Path = Name, UpdateSourceTrigger=PropertyChanged}"/>
+        </Grid>
+        <Grid Grid.Row="2" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Text="Last Name:" Height="40" Width="130" TextAlignment="Center" FontFamily="Showcard Gothic" Foreground="#FF586177" FontSize="20"></TextBlock>
+            <TextBox Grid.Column="1" Height="30" Width="300" Name="LastName" FontSize="15" Text="{Binding Path = LastName, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        </Grid>
+        <Grid Grid.Row="3" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0"  Text="Age:" Height="40" Width="130" TextAlignment="Center" FontFamily="Showcard Gothic" Foreground="#FF586177" FontSize="20"/>
+            <TextBox Grid.Column="1" Height="30" Width="300" Name="Age" FontSize="15" Text="{Binding Path = Age, UpdateSourceTrigger=PropertyChanged}"/>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0"  Text="E-Mail:" Height="40" Width="130" TextAlignment="Center" FontFamily="Showcard Gothic" Foreground="#FF586177" FontSize="20"/>
+            <TextBox Grid.Column="1" Height="30" Width="300" Name="EMail" FontSize="15" Text="{Binding Path = Email, UpdateSourceTrigger=PropertyChanged}"/>
+        </Grid>
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="97*"/>
+                <ColumnDefinition Width="100*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Margin="24,15,20,10" Content="Ok" FontSize="30" Height="40" Width="150" Background="#FF5D6679" Foreground="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" FontFamily="Snap ITC" Click="btnOk_Click" IsDefault="True" />
+            <Button Grid.Column="1" Margin="24,15,20,10" Content="Cancel" FontSize="30" Height="40" Width="150" Background="#FF5D6679" Foreground="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" FontFamily="Snap ITC" Click="btnCancel_Click" IsCancel="True" />
+        </Grid>
+    </Grid>
+</Window>
